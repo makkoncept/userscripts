@@ -120,7 +120,7 @@
         linkElement.setAttribute('data-timestamp-added', 'true');
         
         injectedConversations.add(conversationId);
-        console.log('[ChatGPT chat timestamps] Tooltip injected:', conversationId);
+        // console.log('[ChatGPT chat timestamps] Tooltip injected:', conversationId);
     }
 
     /**
@@ -160,7 +160,7 @@
                     // Parse and store the response
                     clonedResponse.json().then(data => {
                         if (data?.items && Array.isArray(data.items)) {
-                            console.log('[ChatGPT chat timestamps] Intercepted conversations:', data.items.length);
+                            // console.log('[ChatGPT chat timestamps] Intercepted conversations:', data.items.length);
                             data.items.forEach((item, index) => {
                                 if (item.id && item.create_time && item.update_time) {
                                     // Store conversation data
@@ -225,7 +225,7 @@
      * Initialize
      */
     function init() {
-        console.log('[ChatGPT chat timestamps] Script initialized');
+        // console.log('[ChatGPT chat timestamps] Script initialized');
         
         // Setup fetch interceptor
         setupFetchInterception();
